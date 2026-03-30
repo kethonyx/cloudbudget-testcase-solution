@@ -87,8 +87,8 @@ Each row includes:
    sf project deploy start --source-dir force-app
 
 2.	Open org:
-```
-sf org open
+    ```
+    sf org open
 
 3.	Create a Lightning Tab for the component:
 	•	Setup → Tabs → Lightning Component Tabs → New
