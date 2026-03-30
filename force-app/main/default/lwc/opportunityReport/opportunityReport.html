@@ -1,0 +1,58 @@
+<template>
+    <lightning-card title="Opportunity Report" icon-name="standard:opportunity">
+        <div slot="actions">
+            <lightning-combobox
+                name="budgetYear"
+                label="Year"
+                value={budgetYear}
+                options={yearOptions}
+                onchange={handleChange}>
+            </lightning-combobox>
+
+            <lightning-combobox
+                name="stage"
+                label="Stage"
+                value={stage}
+                options={stageOptions}
+                onchange={handleStageChange}>
+            </lightning-combobox>
+
+            <lightning-input
+                type="date"
+                label="Close Date"
+                value={closeDate}
+                onchange={handleCloseDateChange}>
+            </lightning-input>
+
+            <lightning-button
+                label="Export CSV"
+                onclick={handleExport}>
+            </lightning-button>
+        </div>
+
+        <div class="slds-p-around_medium">
+            <lightning-datatable
+                key-field="Id"
+                data={opportunities}
+                columns={columns}
+                hide-checkbox-column
+                onsort={handleSort}
+                onrowaction={handleRowAction}
+                sorted-by={sortBy}
+                sorted-direction={sortDirection}>
+            </lightning-datatable>
+
+            <div class="slds-m-top_medium slds-text-title_bold">
+                Total Amount:
+                <lightning-formatted-number
+                    value={totalAmount}
+                    format-style="currency">
+                </lightning-formatted-number>
+            </div>
+        </div>
+
+        <template lwc:if={showSpinner}>
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </template>
+    </lightning-card>
+</template>
