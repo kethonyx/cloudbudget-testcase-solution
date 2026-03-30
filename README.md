@@ -93,6 +93,7 @@ Each row includes:
 3.	Create a Lightning Tab for the component:
 	
     •	Setup → Tabs → Lightning Component Tabs → New
+    
 	•	Select OpportunityReport
 4.	Add the tab to any Lightning App (App Manager)
 5.	Create sample Opportunity data
