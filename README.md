@@ -1,18 +1,128 @@
-# Salesforce DX Project: Next Steps
+# 🚀 Opportunity Report (Salesforce LWC)
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This project is a solution for the CloudBudget developer test case.
 
-## How Do You Plan to Deploy Your Changes?
+It enhances an Opportunity Report interface using Salesforce Lightning Web Components (LWC) and Apex.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+---
 
-## Configure Your Salesforce DX Project
+## 🎯 Features
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+### 📊 Data Table Enhancements
+- Displays Opportunity data with additional fields:
+  - Name
+  - Fiscal Year
+  - Amount
+  - Stage
+  - Description
+  - Close Date
 
-## Read All About It
+---
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+### 🔍 Filtering
+Users can filter Opportunities by:
+- Year (Fiscal Year)
+- Stage (Picklist)
+- Close Date
+
+Filters are applied dynamically and update the table in real time.
+
+---
+
+### 🔄 Sorting
+- Sorting is supported on all columns
+- Implemented using server-side sorting (Apex)
+
+---
+
+### 💰 Dynamic Total
+- Displays total Amount of all visible (filtered) Opportunities
+- Automatically recalculates when filters change
+
+---
+
+### ⚙️ Row Actions
+Each row includes:
+- **Edit** → Opens standard Salesforce edit page
+- **Delete** → Removes record and refreshes table
+
+---
+
+### 📁 Export CSV
+- Export currently filtered data to CSV file
+- Includes all visible columns
+
+---
+
+## 🧠 Architecture
+
+### Frontend
+- Lightning Web Components (LWC)
+- `lightning-datatable`
+- Reactive UI with filters and sorting
+
+### Backend
+- Apex Controller:
+  - Dynamic SOQL query
+  - Filtering
+  - Sorting
+- Secure handling of parameters (whitelisting fields)
+
+---
+
+## 🔧 Technologies Used
+
+- Salesforce Platform
+- LWC (Lightning Web Components)
+- Apex
+- SOQL
+- SLDS (Salesforce Lightning Design System)
+
+---
+
+## ▶️ How to Run
+
+1. Deploy the project to a Salesforce org:
+   ```bash
+   sf project deploy start --source-dir force-app
+
+	2.	Open org:
+
+sf org open
+
+
+	3.	Create a Lightning Tab for the component:
+	•	Setup → Tabs → Lightning Component Tabs → New
+	•	Select OpportunityReport
+	4.	Add the tab to any Lightning App (App Manager)
+	5.	Create sample Opportunity data
+
+⸻
+
+📌 Notes
+	•	The implementation focuses on clean architecture and stable functionality
+	•	Bonus features like backend automation (trigger/batch) were reviewed but not prioritized over core functionality
+
+⸻
+
+👤 Author
+
+Dimash Sailau
+
+---
+
+# 💡 Почему это хороший README
+
+Он:
+- выглядит профессионально  
+- чётко показывает, что ты сделал  
+- не перегружен  
+- понятен рекрутеру и тех. интервьюеру  
+
+---
+
+Если хочешь, могу:
+- сделать тебе ещё **README уровня “мидл+”**
+- или подготовить тебя к демонстрации (что говорить на звонке)
+
+Скажи 👍
