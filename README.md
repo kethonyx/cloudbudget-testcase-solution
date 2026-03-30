@@ -85,8 +85,8 @@ Each row includes:
 1. Deploy the project to a Salesforce org:
    ```bash
    sf project deploy start --source-dir force-app
-    ```
-	2.	Open org:
+
+2.	Open org:
 ```
 sf org open
 ```
