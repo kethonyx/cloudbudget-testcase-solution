@@ -85,11 +85,11 @@ Each row includes:
 1. Deploy the project to a Salesforce org:
    ```bash
    sf project deploy start --source-dir force-app
-
+    ```
 	2.	Open org:
-
+```
 sf org open
-
+```
 
 	3.	Create a Lightning Tab for the component:
 	•	Setup → Tabs → Lightning Component Tabs → New
@@ -99,30 +99,6 @@ sf org open
 
 ⸻
 
-📌 Notes
-	•	The implementation focuses on clean architecture and stable functionality
-	•	Bonus features like backend automation (trigger/batch) were reviewed but not prioritized over core functionality
-
-⸻
-
 👤 Author
 
-Dimash Sailau
-
----
-
-# 💡 Почему это хороший README
-
-Он:
-- выглядит профессионально  
-- чётко показывает, что ты сделал  
-- не перегружен  
-- понятен рекрутеру и тех. интервьюеру  
-
----
-
-Если хочешь, могу:
-- сделать тебе ещё **README уровня “мидл+”**
-- или подготовить тебя к демонстрации (что говорить на звонке)
-
-Скажи 👍
+Dinmukhamed Sailau
